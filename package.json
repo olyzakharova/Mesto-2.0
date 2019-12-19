@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/olyzakharova/test"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/olyzakharova/test/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/olyzakharova/test",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
@@ -34,7 +34,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
     "file-loader": "^4.2.0",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.8.0",

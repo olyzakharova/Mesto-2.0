@@ -2,7 +2,7 @@
 
 Yandex Praktikum Last Sprint
 
-## [Link to the project]()
+## [Link to the project](https://olyzakharova.github.io/test/)
 
 Version: v.2.0
 

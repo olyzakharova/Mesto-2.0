@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/olyzakharova/test/issues"
   },
-  "homepage": "https://github.com/olyzakharova/test",
+  "homepage": "https://olyzakharova.github.io/test/",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",

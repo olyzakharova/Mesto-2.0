@@ -1,4 +1,7 @@
+/* eslint-disable import/prefer-default-export */
+// eslint-disable-next-line import/no-cycle
 import { Card } from './card';
+// eslint-disable-next-line import/no-cycle
 import { api2 } from '../index';
 
 export class CardList {
@@ -20,11 +23,13 @@ export class CardList {
     api2
       .getInitialCards()
       .then((res) => {
+        // eslint-disable-next-line no-shadow
         res.forEach((res) => {
           this.addCard(res.name, res.link);
         });
       })
       .catch((err) => {
+        // eslint-disable-next-line no-console
         console.log(err);
       });
   }

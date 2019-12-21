@@ -1,7 +1,7 @@
 {
   "name": "mesto",
   "version": "0.0.1",
-  "description": "",
+  "description": "sprint 11",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ./src/scripts --ext .js",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/olyzakharova/test"
   },
-  "author": "",
+  "author": "Olya Zakharova",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/olyzakharova/test/issues"
@@ -26,13 +26,17 @@
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.6.0",
     "autoprefixer": "^9.7.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.0",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^4.2.0",
     "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^3.2.0",

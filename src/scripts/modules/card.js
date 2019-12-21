@@ -1,3 +1,7 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-cycle */
+import { popupBigImage } from '../index';
+
 export class Card {
   constructor(name, link) {
     this.card = this.createCard(name, link);
@@ -44,7 +48,7 @@ export class Card {
   }
 
   // удаление карточки по нажатию
-  remove = () => {
+  remove = (event) => {
     event.stopPropagation();
     this.placeCard.parentNode.removeChild(this.placeCard);
   }
@@ -55,7 +59,7 @@ export class Card {
   }
 
   // открытие большого изображения
-  open = () => {
+  open = (event) => {
     const bigPicture = document.querySelector('.popup__big-image');
     bigPicture.src = event.target.getAttribute('imageURL');
     popupBigImage.open();

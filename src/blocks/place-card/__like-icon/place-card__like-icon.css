@@ -6,10 +6,11 @@
   height: 19px;
   cursor: pointer;
   transition: transform .3s linear;
+  margin: 0 0 3px;
 }
 
 .place-card__like-icon_liked {
-  background-image: url('../../../images/like-inactive.svg');
+  background-image: url('../../../images/like-active.svg');
 }
 
 .place-card__like-icon:hover {

@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable import/prefer-default-export */
 export class Api {
   constructor(config) {
     this.url = config.url;
@@ -9,6 +12,7 @@ export class Api {
     if (res.ok) {
       return res.json();
     }
+    // eslint-disable-next-line prefer-promise-reject-errors
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 

@@ -18,64 +18,65 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-            (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-            'css-loader',
-            'postcss-loader',
-        ]
+          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          'css-loader',
+          'postcss-loader',
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",  
-            options: {
-                    presets: [
-                    '@babel/preset-env',
-                    {
-                        plugins: [
-                        '@babel/plugin-proposal-class-properties'
-                        ]
-                    }
-                    ]
-                },
-        }
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              {
+                plugins: [
+                  '@babel/plugin-proposal-class-properties',
+                ],
+              },
+            ],
+          },
+        },
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-             'file-loader?name=./images/[name].[ext]',
-             {
-                loader: 'image-webpack-loader',
-                options: {}
-            },
-      ],
+          'file-loader?name=./images/[name].[ext]',
+          {
+            loader: 'image-webpack-loader',
+            options: {},
+          },
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
-      }
-    ]
+        loader: 'file-loader?name=./vendor/[name].[ext]',
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: 'style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
-        assetNameRegExp: /\.css$/g,
-        cssProcessor: require('cssnano'),
-        cssProcessorPluginOptions: {
-                preset: ['default'],
-        },
-        canPrint: true
+      assetNameRegExp: /\.css$/g,
+      // eslint-disable-next-line global-require
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default'],
+      },
+      canPrint: true,
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
- })
-  ]
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
+  ],
 };

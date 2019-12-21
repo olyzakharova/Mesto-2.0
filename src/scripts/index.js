@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable import/no-cycle */
 import { Api } from './modules/api';
 import { CardList } from './modules/cardlist';
 import { Popup } from './modules/popup';
@@ -23,6 +25,7 @@ editUserInfoButton.addEventListener('click', () => {
 });
 
 
+// eslint-disable-next-line no-undef
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort5' : 'https://praktikum.tk/cohort5';
 
 
@@ -43,7 +46,6 @@ const myConfig2 = {
     'Content-Type': 'application/json',
   },
 };
-
 
 
 const api1 = new Api(myConfig1);
@@ -87,17 +89,6 @@ function isValid(elementToCheck) {
   errorElement.textContent = '';
   return true;
 }
-
-// function errorReset(parentNode) {
-//   const errorsCollection = Array.from(parentNode.getElementsByTagName('span'));
-//   errorsCollection.forEach((item) => {
-//     const idToCheck = item.id;
-
-//     if (idToCheck.includes('error')) {
-//       item.textContent = '';
-//     }
-//   });
-// }
 
 function validateAddCard() {
   const validatePlace = isValid(newCardForm.elements.name);
